@@ -1,76 +1,76 @@
-# **IDM Activation Script (Activator + Registry Cleaner)**
+# **Script Aktivasi IDM (Aktivator + Pembersih Registri)**
 
-IDM Activation Script is a tool designed to activate Internet Download Manager (IDM) for free, allowing users to bypass trial period restrictions and enjoy the full version without purchasing a license.
+Skrip Aktivasi IDM adalah alat yang dirancang untuk mengaktifkan Internet Download Manager (IDM) secara gratis, yang memungkinkan pengguna melewati batasan masa uji coba dan menikmati versi lengkap tanpa membeli lisensi.
 
-### 📝 **Latest Verison**
-- Coporton IDM Activation Script 2.5.5
-- Support Internet Download Manager 6.42 Build 41
+### 📝 **Versi Terbaru**
+- Skrip Aktivasi IDM Coporton 2.5.5
+- Dukungan Internet Download Manager 6.42 Build 41
 
-## 💪 **Features**
+## 💪 **Fitur**
 
-- ✅ Activate Internet Download Manager for free.
-- 🛠  Simple and easy-to-use interface.
-- 🌐 Automatic version validation (script and IDM).
-- 📂 Compatible with multiple versions of IDM.
-- 💻 Lightweight and fast.
+- ✅ Aktifkan Internet Download Manager secara gratis.
+- Antarmuka yang sederhana dan mudah digunakan.
+- Validasi versi otomatis (skrip dan IDM).
+- Kompatibel dengan berbagai versi IDM.
+- Ringan dan cepat.
 
-## 🛠️ **Installation**
+## 🛠️ **Instalasi**
 
-### **Method 1 (Recommended)**
-1. **Open PowerShell**:
-   - Right-click the Start menu and select **Windows PowerShell** or **Windows Terminal**.
-   - If prompted by User Account Control (UAC), click **Yes** to allow PowerShell to run with administrative privileges.
+### **Metode 1 (Direkomendasikan)**
+1. **Buka PowerShell**:
+   - Klik kanan menu Start dan pilih **Windows PowerShell** atau **Windows Terminal**.
+   - Jika diminta oleh Kontrol Akun Pengguna (UAC), klik **Ya** untuk mengizinkan PowerShell berjalan dengan hak istimewa administratif.
 
-2. **Run the following command in PowerShell** to download and execute the activation script:
+2. **Jalankan perintah berikut di PowerShell** untuk mengunduh dan menjalankan skrip aktivasi:
 
    ```powershell
    irm https://coporton.com/ias | iex
    ```
 
-### **Method 2**
-1. **Download**: Obtain the latest version of the tool from the [releases page](https://github.com/Coporton/IDM-Activation-Script/releases).
-2. **Extract**: Unzip the downloaded file to a directory of your choice.
+### **Metode 2**
+1. **Unduh**: Dapatkan versi terbaru alat dari [halaman rilis](https://github.com/Coporton/IDM-Activation-Script/releases).
+2. **Ekstrak**: Ekstrak file yang diunduh ke direktori pilihan Anda.
 
-## 💻 **Usage**
+## 💻 **Penggunaan**
 
-### 1. Run the Script:
-- Double-click on `IASL.cmd` to execute it. The script will automatically request administrative privileges if needed, so you no longer need to manually select "Run as Administrator."
-- If prompted by User Account Control (UAC), click **Yes** to grant the necessary permissions.
-- Once elevated, the script will continue running with the appropriate permissions for file operations.
+### 1. Jalankan Skrip:
+Klik dua kali pada `IASL.cmd` untuk menjalankannya. Skrip akan secara otomatis meminta hak akses administratif jika diperlukan, sehingga Anda tidak perlu lagi memilih "Jalankan sebagai Administrator" secara manual.
+- Jika diminta oleh Kontrol Akun Pengguna (UAC), klik **Ya** untuk memberikan izin yang diperlukan.
+- Setelah ditinggikan, skrip akan terus berjalan dengan izin yang sesuai untuk operasi file.
 
-### 2. Follow the On-Screen Instructions:
-- Choose an option from the menu:
-  - `1` to Download Latest IDM Version.
-  - `2` to Activate Internet Download Manager.
-  - `3` to Extra FileTypes Extensions.
-  - `4` to Do Everything (2 + 3).
-  - `5` Clean Previous IDM Registry Entries.
-  - `6` to exit.
-- If you select `4`, the script will copy the necessary files to the appropriate directory and provide feedback on the operation status.
+### 2. Ikuti petunjuk di layar:
+- Pilih opsi dari menu:
+  - `1` untuk Mengunduh IDM Versi Terbaru.
+  - `2` untuk Mengaktifkan Internet Download Manager.
+  - `3` ke Ekstensi Tipe File Ekstra.
+  - `4` untuk Melakukan Segalanya (2 + 3).
+  - `5` Bersihkan Entri Registri IDM Sebelumnya.
+  - `6` untuk keluar.
+- Jika Anda memilih `4`, skrip akan menyalin file yang diperlukan ke direktori yang sesuai dan memberikan umpan balik tentang status operasi.
 
-## ✅ **Troubleshooting**
+## ✅ **Pemecahan Masalah**
 
-- **Administrative Privileges**: If the script does not prompt for administrative rights, ensure you are running it with the required permissions by right-clicking and selecting "Run as Administrator."
-- **File Paths**: Verify that the `data.bin`, `dataHlp.bin`, `Registry.bin`, `extensions.bin`, and `banner_art.txt` files are correctly placed in the `src` directory.
-- **Registered with a Fake Serial**: Don't worry! Use a trusted third-party uninstaller like IObit Uninstaller, and then use this script [IObit Uninstaller Activation Script](https://github.com/Coporton/IObit-Uninstaller-Activation-Script) to activate it and ensure all files, including registry entries, are removed.
+**Hak Administratif**: Jika skrip tidak meminta hak administratif, pastikan Anda menjalankannya dengan izin yang diperlukan dengan mengklik kanan dan memilih "Jalankan sebagai Administrator".
+- **Jalur Berkas**: Verifikasi bahwa berkas `data.bin`, `dataHlp.bin`, `Registry.bin`, `extensions.bin`, dan `banner_art.txt` ditempatkan dengan benar di direktori `src`.
+**Terdaftar dengan Serial Palsu**: Jangan khawatir! Gunakan uninstaller pihak ketiga tepercaya seperti IObit Uninstaller, lalu gunakan skrip ini [IObit Uninstaller Activation Script](https://github.com/Coporton/IObit-Uninstaller-Activation-Script) untuk mengaktifkannya dan memastikan semua berkas, termasuk entri registri, terhapus.
 
-## 📄 **BIN Files**
+## 📄 **Berkas BIN**
 
-### These files are not encrypted; you can rename them to view the source file:
+### File-file ini tidak dienkripsi; Anda dapat mengganti namanya untuk melihat file sumber:
 
-- `data.bin` - Contains a activated version of IDMan.exe.
-- `dataHlp.bin` - Contains a help support version of IDMGrHlp.exe.
-- `Registry.bin` - Registry values to activate Internet Download Manager.
-- `extensions.bin` - Registry entries for extra Internet Download Manager file extensions.
+- `data.bin` - Berisi versi IDMan.exe yang diaktifkan.
+- `dataHlp.bin` - Berisi versi dukungan bantuan IDMGrHlp.exe.
+- `Registry.bin` - Nilai registri untuk mengaktifkan Internet Download Manager.
+- `extensions.bin` - Entri registri untuk ekstensi file Internet Download Manager tambahan.
 
-## 📜 **License**
+## 📜 **Lisensi**
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Proyek ini dilisensikan di bawah Lisensi MIT. Lihat berkas [LICENSE](LICENSE) untuk detailnya.
 
-## ℹ️ **Acknowledgments**
+## ℹ️ **Ucapan Terima Kasih**
 
-- Special thanks to AI, that was instrumental in this script's functionality.
+- Ucapan terima kasih khusus kepada AI yang berperan penting dalam fungsionalitas skrip ini.
 
-## ❓ **Contact**
+## ❓ **Kontak**
 
-For questions or support, please open an issue on the GitHub repository.
+Untuk pertanyaan atau dukungan, silakan buka masalah di repositori GitHub.
