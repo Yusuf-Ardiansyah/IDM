@@ -3,7 +3,7 @@ setlocal EnableDelayedExpansion
 set iasver=2.5.5
 
 ::============================================================================
-:: Coporton IDM Activation Script (Activator + Registry Cleaner)
+:: Skrip Aktivasi IDM (Aktivator + Pembersih Registri)
 ::============================================================================
 
 mode con: cols=120 lines=40
@@ -92,7 +92,7 @@ if "%is_newer%"=="1" (
     echo Latest version : %LATEST_VERSION%
     goto ask_download
 ) else (
-    echo %GREEN% Your script is up-to-date. Version: %SCRIPT_VERSION% %RESET%
+    echo %GREEN% Skrip Anda sudah diperbarui. Versi: %SCRIPT_VERSION% %RESET%
     goto continue_script
 )
 
@@ -126,13 +126,13 @@ endlocal & set "is_newer=0"
 exit /b
 
 ::--------------------------
-:: Ask to download new version
+:: Minta untuk mengunduh versi baru
 ::--------------------------
 :ask_download
 echo %GREEN% ========================================================================
 echo %GREEN%    :                                                                :
-echo %GREEN%    :  Do you want to download the latest version of the script?     : 
-echo %GREEN%    :                       (1 = Yes / 2 = No)                       :
+echo %GREEN%    :  Apakah Anda ingin mengunduh skrip versi terbaru?    : 
+echo %GREEN%    :                       (1 = Ya / 2 = Tidak)                       :
 echo %GREEN% =======================================================================%RESET%
 echo.
 
@@ -196,13 +196,13 @@ if defined installed (
     set "installed=!installed:Full=!"
     set "installed=!installed: =!"
     set "installed=!installed:b= Build !"
-    echo %GREEN% Internet Download Manager found. Installed version: !installed!%RESET%
+    echo %GREEN% Internet Download Manager ditemukan. Versi terinstal: !installed!%RESET%
 ) else (
     setlocal disabledelayedexpansion
-    echo %RED% Error: Unable to find Internet Download Manager installation directory.%RESET%
-    echo %YELLOW% Please ensure Internet Download Manager is installed correctly. Then run this script again.%RESET%
+    echo %RED% Error: Tidak dapat menemukan direktori instalasi Internet Download Manager.%RESET%
+    echo %YELLOW% Pastikan Internet Download Manager terpasang dengan benar. Lalu jalankan skrip ini lagi..%RESET%
     echo.
-    echo %GREEN% You can download the latest version from here: %downloadurl%%RESET%
+    echo %GREEN% Anda dapat mengunduh versi terbaru dari sini: %downloadurl%%RESET%
     echo.
     echo Loading Menu . . .
     goto :menu
@@ -221,10 +221,10 @@ set /a o_total = 10000 * !o_major! + 100 * !o_minor! + !o_build!
 
 echo.
 if !i_total! GEQ !o_total! (
-    echo %GREEN% You already have the latest version of Internet Download Manager.%RESET%
+    echo %GREEN% Anda sudah memiliki versi terbaru Internet Download Manager.%RESET%
 ) else (
-    echo %YELLOW% A newer version of IDM is available!%RESET%
-    echo %GREEN% Please update to the latest version: !online_version!%RESET%
+    echo %YELLOW% Versi IDM yang lebih baru tersedia!%RESET%
+    echo %GREEN% Harap perbarui ke versi terbaru: !online_version!%RESET%
 )
 echo.
 
@@ -238,12 +238,12 @@ timeout /t 1 >nul
 echo.
 echo %GREEN%  ======================================================
 echo %GREEN%    :                                                :
-echo %GREEN%    :  [1] Download Latest IDM Version               :
+echo %GREEN%    :  [1] Unduh IDM Versi Terbaru               :
 echo %GREEN%    :  [2] Activate Internet Download Manager        :
 echo %GREEN%    :  [3] Extra FileTypes Extensions                :
-echo %GREEN%    :  [4] Do Everything (2 + 3)                     :
-echo %RED%    :  [5] Completely Remove IDM Registry Entries    :
-echo %GREEN%    :  [6] Exit                                      :
+echo %GREEN%    :  [4] Lakukan Segalanya (2 + 3)                     :
+echo %RED%    :  [5] Hapus Entri Registri IDM Sepenuhnya    :
+echo %GREEN%    :  [6] KELUAR                                      :
 echo %GREEN%    :                                                :
 echo %GREEN%  ======================================================%RESET%
 echo.
@@ -278,13 +278,13 @@ for /f "tokens=1,* delims=:" %%a in ('findstr /i "browser_download_url" "%temp%\
 
 :: Verify that the download URL was extracted correctly
 if not "!DOWNLOAD_URL!"=="" (
-    echo %GREEN% Opening your browser to download the latest script...%RESET%
+    echo %GREEN% Membuka peramban Anda untuk mengunduh skrip terbaru..%RESET%
     echo.
     start "" "!DOWNLOAD_URL!"
-    echo %YELLOW% If your download does not start automatically, copy and paste this URL into your browser:%RESET%
+    echo %YELLOW% Jika unduhan Anda tidak dimulai secara otomatis, salin dan tempel URL ini ke browser Anda:%RESET%
     echo %YELLOW% !DOWNLOAD_URL!%RESET%
 ) else (
-    echo %RED% Failed to retrieve download URL.%RESET%
+    echo %RED% Gagal mengambil unduhan URL.%RESET%
 )
 exit
 
@@ -293,23 +293,23 @@ exit
 call :check_internet
 
 if /i "!online_version!"=="Unknown" (
-    echo %RED% No version info available. Try checking for updates first.%RESET%
+    echo %RED% Tidak ada informasi versi yang tersedia. Coba periksa pembaruan terlebih dahulu..%RESET%
     exit /b
 )
-echo %GREEN% Opening your browser to download the latest IDM...%RESET%
+echo %GREEN% Membuka browser Anda untuk mengunduh IDM terbaru...%RESET%
 echo.
 start "" "%downloadurl%"
-echo %YELLOW% If your download does not start automatically, copy and paste this URL into your browser:%RESET%
+echo %YELLOW% Jika unduhan Anda tidak dimulai secara otomatis, salin dan tempel URL ini ke browser Anda:%RESET%
 echo.
 exit /b
 
 ::----------------------
 :: Internet check subroutine
 :check_internet
-echo Checking internet connectivity...
+echo Memeriksa konektivitas internet...
 ping -n 1 google.com >nul 2>&1
 if errorlevel 1 (
-    echo %RED% Internet not available. Please check your connection.%RESET%
+    echo %RED% Internet tidak tersedia. Silakan periksa koneksi Anda..%RESET%
     pause
     exit /b
 )
@@ -346,8 +346,8 @@ copy "%DATAHLP_FILE%" "%DEFAULT_DEST_DIR%IDMGrHlp.exe" >nul
 
 :: ——— PROMPT FOR USER INPUT ———
 echo.
-SET /P FName=Enter your First Name: 
-SET /P LName=Enter your Last Name: 
+SET /P FName=Masukkan Nama Depan Anda: 
+SET /P LName=Masukkan Nama Belakang Anda: 
 echo.
 
 :: ——— FALLBACK TO DEFAULTS IF BLANK ———
@@ -358,7 +358,7 @@ if "%LName%"=="" set "LName=WorkStation"
 reg add "HKCU\SOFTWARE\DownloadManager" /v FName /t REG_SZ /d "%FName%" /f >nul
 reg add "HKCU\SOFTWARE\DownloadManager" /v LName /t REG_SZ /d "%LName%" /f >nul
 
-echo %GREEN% Internet Download Manager Activated.%RESET%
+echo %GREEN% Internet Download Manager Diaktifkan.%RESET%
 exit /b
 
 :verifyFile
@@ -385,18 +385,18 @@ call :ActivateIDM
 call :AddExtensions
 echo.
 echo [%DATE% %TIME%] Activated IDM >> %SCRIPT_DIR%log.txt
-echo %GREEN% Congratulations. All tasks completed successfully!%RESET%
+echo %GREEN% Selamat. Semua tugas telah diselesaikan dengan sukses.!%RESET%
 echo.
 exit /b
 
 ::----------------------
 :askReturn
-set /p back=" Return to main menu? (Y/N): "
+set /p back=" Kembali ke menu utama? (Y/N): "
 if not defined back goto :askReturn
 if /i "%back%"=="Y" set "choice=" & goto :menu
 if /i "%back%"=="N" call :quit
 
-echo %RED% Invalid input. Please type Y or N.%RESET%
+echo %RED% Input tidak valid. Silakan ketik Y atau N..%RESET%
 goto :askReturn
 
 
@@ -405,7 +405,7 @@ goto :askReturn
 :: Full registry cleaning logic
 
 call :terminateProcess "IDMan.exe"
-echo %YELLOW% Cleaning IDM-related Registry Entries...%RESET%
+echo %YELLOW% Membersihkan Entri Registri terkait IDM...%RESET%
 
 for %%k in (
     "HKLM\Software\Classes\CLSID\{7B8E9164-324D-4A2E-A46D-0165FB2000EC}"
@@ -473,12 +473,12 @@ for %%v in ("FName" "LName" "Email" "Serial" "CheckUpdtVM" "tvfrdt" "LstCheck" "
     reg delete "HKCU\Software\DownloadManager" /v %%v /f >nul 2>&1
 )
 
-echo %GREEN% Registry cleanup completed.%RESET%
+echo %GREEN% Pembersihan registri selesai.%RESET%
 exit /b
 
 ::----------------------
 :quit
 echo.
-echo %GREEN% Thank you for using Coporton IDM Activation Script. Have a great day... %RESET%
+echo %GREEN% Terima kasih telah menggunakan Skrip Aktivasi IDM . Semoga harimu menyenangkan... %RESET%
 timeout /t 2 >nul
 exit
